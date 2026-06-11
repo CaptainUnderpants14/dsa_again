@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int arr[] = {3, 2, 16, 4, 1, 0};
+        
         //Print before sort
         System.out.println("Before sorting: " + Arrays.toString(arr));
 
