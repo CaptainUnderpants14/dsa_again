@@ -8,6 +8,7 @@ class Node{
 public class LinkedList {
     Node head = null;
 
+    //Add element to the list
     public void addElement(int data){
         // can directly insert data while making a new node like Node newNode = new Node(data); or in a new line
         Node newNode = new Node();
@@ -24,7 +25,28 @@ public class LinkedList {
             }
             current.next = newNode;
         }
+    }
 
+    public void addFirst(int data){
+        Node newNode = new Node();
+        newNode.data = data;
+
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void delFirst(){
+        head = head.next;
+    }
+
+    public void delByValue(int data){
+        Node current = head;
+        while (current.next != null && current.next.data != data){
+            current = current.next;
+        }
+        if (current.next != null){
+            current.next = current.next.next;
+        }
     }
 
     public void printValues(){

@@ -10,6 +10,7 @@ public class Driver {
         newList.addElement(34);
         newList.addElement(0);
         newList.addElement(55);
+        newList.delByValue(0);
         newList.printValues();
 
     }
