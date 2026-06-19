@@ -1,5 +1,6 @@
 package Trees;
 
+//Node definition
 public class BST{
     public class Node{
         int value;
@@ -51,6 +52,54 @@ public class BST{
         printTree(node.left, level + 1);
     }
 
+    //preroder traversal
+    public void preorder(){
+        System.out.print("Preorder traversal: ");
+        preorder(root);
+        System.out.println();
+    }
+
+    public void preorder(Node node){
+        if (node == null){
+            return;
+        }
+        System.out.print(node.value + " ");
+        preorder(node.left);
+        preorder(node.right);
+    }
+
+    //inroder traversal
+    public void inorder(){
+        System.out.print("Inorder traversal: ");
+        preorder(root);
+        System.out.println();
+    }
+
+    public void inorder(Node node){
+        if (node == null){
+            return;
+        }
+        System.out.print(node.value + " ");
+        inorder(node.left);
+        inorder(node.right);
+    }
+
+    //postroder traversal
+    public void postorder(){
+        System.out.print("Postorder traversal: ");
+        preorder(root);
+        System.out.println();
+    }
+
+    public void postorder(Node node){
+        if (node == null){
+            return;
+        }
+        postorder(node.left);
+        postorder(node.right);
+        System.out.print(node.value + " ");
+    }
+
     public static void main(String[] args) {
         BST bst = new BST();
         bst.insert(50);
@@ -61,5 +110,8 @@ public class BST{
         bst.insert(60);
         bst.insert(80);
         bst.printTree();
+        bst.preorder();
+        bst.inorder();
+        bst.postorder();
     }
 }
