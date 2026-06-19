@@ -1,7 +1,7 @@
 package Trees;
 
 //Node definition
-public class BST{
+public class BST_and_DFS{
     public class Node{
         int value;
         Node left;
@@ -52,6 +52,7 @@ public class BST{
         printTree(node.left, level + 1);
     }
 
+    //DFS algos
     //preroder traversal
     public void preorder(){
         System.out.print("Preorder traversal: ");
@@ -71,7 +72,7 @@ public class BST{
     //inroder traversal
     public void inorder(){
         System.out.print("Inorder traversal: ");
-        preorder(root);
+        inorder(root);
         System.out.println();
     }
 
@@ -79,15 +80,15 @@ public class BST{
         if (node == null){
             return;
         }
-        System.out.print(node.value + " ");
         inorder(node.left);
+        System.out.print(node.value + " ");
         inorder(node.right);
     }
 
     //postroder traversal
     public void postorder(){
         System.out.print("Postorder traversal: ");
-        preorder(root);
+        postorder(root);
         System.out.println();
     }
 
@@ -101,7 +102,7 @@ public class BST{
     }
 
     public static void main(String[] args) {
-        BST bst = new BST();
+        BST_and_DFS bst = new BST_and_DFS();
         bst.insert(50);
         bst.insert(30);
         bst.insert(70);

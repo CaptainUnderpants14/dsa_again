@@ -1,3 +1,4 @@
+package Leetcode;
 //Find the first true in a sorted boolean array
 // arr = {f, f, f, f, f, t, t, t} return first t's index
 
