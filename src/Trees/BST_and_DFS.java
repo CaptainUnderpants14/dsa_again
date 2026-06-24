@@ -21,7 +21,6 @@ public class BST_and_DFS{
 
     //Recursive insertion
     public Node insert(Node node, int value){
-
         if (node == null){
             return new Node(value);
         }
